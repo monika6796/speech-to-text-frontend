@@ -33,8 +33,7 @@ const Upload = () => {
     try {
       setLoading(true);
 
-      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/transcribe`, formData, {
-
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/process-audio`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
